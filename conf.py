@@ -129,6 +129,7 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/archive.html", "Archive"),
         ("/categories/index.html", "Tags"),
+        ("/stories/fedmsg.html", "fedmsg"),
         ("/rss.xml", "RSS feed"),
     ),
 }
