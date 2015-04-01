@@ -7,8 +7,6 @@
 .. description: 
 .. type: text
 
-Write your page here.
-
 HelloWorld
 ==========
 

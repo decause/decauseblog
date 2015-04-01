@@ -658,7 +658,7 @@ ANNOTATIONS = True
 #          will not be generated for that directory.
 # STORY_INDEX = False
 # Enable comments on story pages?
-COMMENTS_IN_STORIES = False
+COMMENTS_IN_STORIES = True
 # Enable comments on picture gallery pages?
 COMMENTS_IN_GALLERIES = False
 
