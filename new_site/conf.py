@@ -17,16 +17,16 @@ import time
 
 
 # Data about this site
-BLOG_AUTHOR = "decause"  # (translatable)
-BLOG_TITLE = "decauseblog"  # (translatable)
+BLOG_AUTHOR = ""  # (translatable)
+BLOG_TITLE = "Remy DeCausemaker at Opensource.com"  # (translatable)
 # This is the main URL for your site. It will be used
 # in a prominent link
-SITE_URL = "http://blog-decause.rhcloud.com"
+SITE_URL = "http://opensource.com/user_articles/10833"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
-# BASE_URL = "http://blog-decause.rhcloud.com"
-BLOG_EMAIL = "decause@redhat.com"
-BLOG_DESCRIPTION = "Hackademia & FLOSSophy"  # (translatable)
+# BASE_URL = "http://opensource.com/user_articles/10833"
+BLOG_EMAIL = ""
+BLOG_DESCRIPTION = ""  # (translatable)
 
 # Nikola is multilingual!
 #
@@ -80,15 +80,9 @@ DEFAULT_LANG = "en"
 # the path will be used as a prefix for the generated pages location
 TRANSLATIONS = {
     DEFAULT_LANG: "",
+    # Example for another language:
+    # "es": "./es",
 }
-
-# Someday, we'll blog in esperanto, espanol, and francais... but not today
-#TRANSLATIONS = {
-#    DEFAULT_LANG: "",
-#    "es": "./es",
-#    "fr": "./fr",
-#    "eo": "./eo",
-#}
 
 # What will translated input files be named like?
 
@@ -127,7 +121,7 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
+        ("/archive.html", "Archives"),
         ("/categories/index.html", "Tags"),
         ("/rss.xml", "RSS feed"),
     ),
@@ -206,15 +200,11 @@ TIMEZONE = "UTC"
 #
 
 POSTS = (
-    ("posts/*.rst", "posts", "post.tmpl"),
-    ("posts/*.txt", "posts", "post.tmpl"),
-    ("posts/*.html", "posts", "post.tmpl"),
-)
+            ("posts/*.html", "posts", "post.tmpl"),
+        )
 PAGES = (
-    ("stories/*.rst", "stories", "story.tmpl"),
-    ("stories/*.txt", "stories", "story.tmpl"),
-    ("stories/*.html", "stories", "story.tmpl"),
-)
+            ("stories/*.html", "stories", "story.tmpl"),
+        )
 
 # One or more folders containing files to be copied as-is into the output.
 # The format is a dictionary of {source: relative destination}.
@@ -236,23 +226,11 @@ PAGES = (
 # 'markdown' is MarkDown
 # 'html' assumes the file is HTML and just copies it
 COMPILERS = {
-    "rest": ('.rst', '.txt'),
-    "markdown": ('.md', '.mdown', '.markdown'),
-    "textile": ('.textile',),
-    "txt2tags": ('.t2t',),
-    "bbcode": ('.bb',),
-    "wiki": ('.wiki',),
-    "ipynb": ('.ipynb',),
-    "html": ('.html', '.htm'),
-    # PHP files are rendered the usual way (i.e. with the full templates).
-    # The resulting files have .php extensions, making it possible to run
-    # them without reconfiguring your server to recognize them.
-    "php": ('.php',),
-    # Pandoc detects the input from the source filename
-    # but is disabled by default as it would conflict
-    # with many of the others.
-    # "pandoc": ('.rst', '.md', '.txt'),
-}
+        "rest": ('.txt', '.rst'),
+        "markdown": ('.md', '.mdown', '.markdown', '.wp'),
+        "html": ('.html', '.htm')
+        }
+
 
 # Create by default posts in one file format?
 # Set to False for two-file posts, with separate metadata.
@@ -268,7 +246,7 @@ COMPILERS = {
 # Nikola supports logo display.  If you have one, you can put the URL here.
 # Final output is <img src="LOGO_URL" id="logo" alt="BLOG_TITLE">.
 # The URL may be relative to the site root.
-# LOGO_URL = 'assets/img/decausevatar-50px.png'
+# LOGO_URL = ''
 
 # If you want to hide the title of your website (for example, if your logo
 # already contains the text), set this to False.
@@ -365,7 +343,7 @@ WRITE_TAG_CLOUD = True
 # RSS_PATH = ""
 
 # Number of posts in RSS feeds
-FEED_LENGTH = 100
+# FEED_LENGTH = 10
 
 # Slug the Tag URL easier for users to type, special characters are
 # often removed or replaced as well.
@@ -390,9 +368,15 @@ REDIRECTIONS = []
 # to `nikola deploy`.  If no arguments are specified, a preset
 # named `default` will be executed.  You can use as many presets
 # in a `nikola deploy` command as you like.
+# DEPLOY_COMMANDS = {
+#     'default': [
+#         "rsync -rav --delete output/ joe@my.site:/srv/www/site",
+#     ]
+# }
+
 DEPLOY_COMMANDS = {
     'default': [
-        "cp -R output/* ../blog/",
+        "rsync -rav output/ ../../blog/",
     ]
 }
 
@@ -596,9 +580,7 @@ RSS_LINKS_APPEND_QUERY = False
 
 # A HTML fragment describing the license, for the sidebar.
 # (translatable)
-LICENSE = """
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-"""
+LICENSE = ""
 # I recommend using the Creative Commons' wizard:
 # http://creativecommons.org/choose/
 # LICENSE = """
@@ -650,7 +632,7 @@ COMMENT_SYSTEM_ID = "decauseblog"
 # setting the "annotations" metadata.
 # If set to True, you can disable them for individual posts and pages using
 # the "noannotations" metadata.
-ANNOTATIONS = True
+# ANNOTATIONS = False
 
 # Create index.html for page (story) folders?
 # WARNING: if a page would conflict with the index file (usually
@@ -658,9 +640,9 @@ ANNOTATIONS = True
 #          will not be generated for that directory.
 # STORY_INDEX = False
 # Enable comments on story pages?
-COMMENTS_IN_STORIES = False
+# COMMENTS_IN_STORIES = False
 # Enable comments on picture gallery pages?
-COMMENTS_IN_GALLERIES = False
+# COMMENTS_IN_GALLERIES = False
 
 # What file should be used for directory indexes?
 # Defaults to index.html
@@ -754,19 +736,30 @@ COMMENTS_IN_GALLERIES = False
 # Social buttons. This is sample code for AddThis (which was the default for a
 # long time). Insert anything you want here, or even make it empty.
 # (translatable)
-SOCIAL_BUTTONS_CODE = """
-"""
+# SOCIAL_BUTTONS_CODE = """
+# <!-- Social buttons -->
+# <div id="addthisbox" class="addthis_toolbox addthis_peekaboo_style addthis_default_style addthis_label_style addthis_32x32_style">
+# <a class="addthis_button_more">Share</a>
+# <ul><li><a class="addthis_button_facebook"></a>
+# <li><a class="addthis_button_google_plusone_share"></a>
+# <li><a class="addthis_button_linkedin"></a>
+# <li><a class="addthis_button_twitter"></a>
+# </ul>
+# </div>
+# <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f7088a56bb93798"></script>
+# <!-- End of social buttons -->
+# """
 
 # Show link to source for the posts?
 # Formerly known as HIDE_SOURCELINK (inverse)
-SHOW_SOURCELINK = True
+# SHOW_SOURCELINK = True
 # Copy the source files for your pages?
 # Setting it to False implies SHOW_SOURCELINK = False
 # COPY_SOURCES = True
 
 # Modify the number of Post per Index Page
 # Defaults to 10
-INDEX_DISPLAY_POST_COUNT = 100
+# INDEX_DISPLAY_POST_COUNT = 10
 
 # By default, Nikola generates RSS files for the website and for tags, and
 # links to it.  Set this to False to disable everything RSS-related.
@@ -788,25 +781,25 @@ INDEX_DISPLAY_POST_COUNT = 100
 # Or a DuckDuckGo search: https://duckduckgo.com/search_box.html
 # Default is no search form.
 # (translatable)
-# SEARCH_FORM = """
+# SEARCH_FORM = ""
 #
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
 #
-SEARCH_FORM = """
-<!-- Custom search -->
-<form method="get" id="search" action="//duckduckgo.com/"
- class="navbar-form pull-left">
-<input type="hidden" name="sites" value="%s"/>
-<input type="hidden" name="k8" value="#444444"/>
-<input type="hidden" name="k9" value="#D51920"/>
-<input type="hidden" name="kt" value="h"/>
-<input type="text" name="q" maxlength="255"
- placeholder="Search&hellip;" class="span2" style="margin-top: 4px;"/>
-<input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
-</form>
-<!-- End of custom search -->
-""" % SITE_URL
+# SEARCH_FORM = """
+# <!-- Custom search -->
+# <form method="get" id="search" action="//duckduckgo.com/"
+#  class="navbar-form pull-left">
+# <input type="hidden" name="sites" value="%s"/>
+# <input type="hidden" name="k8" value="#444444"/>
+# <input type="hidden" name="k9" value="#D51920"/>
+# <input type="hidden" name="kt" value="h"/>
+# <input type="text" name="q" maxlength="255"
+#  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;"/>
+# <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
+# </form>
+# <!-- End of custom search -->
+# """ % SITE_URL
 #
 # If you prefer a Google search form, here's an example that should just work:
 # SEARCH_FORM = """
