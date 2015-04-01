@@ -1,3 +1,4 @@
 output
 *.db
 *.pyc
+requirements.txt
