@@ -651,7 +651,7 @@ COMMENT_SYSTEM_ID = "decauseblog"
 # setting the "annotations" metadata.
 # If set to True, you can disable them for individual posts and pages using
 # the "noannotations" metadata.
-ANNOTATIONS = True
+ANNOTATIONS = False
 
 # Create index.html for page (story) folders?
 # WARNING: if a page would conflict with the index file (usually
@@ -659,7 +659,7 @@ ANNOTATIONS = True
 #          will not be generated for that directory.
 # STORY_INDEX = False
 # Enable comments on story pages?
-COMMENTS_IN_STORIES = True
+COMMENTS_IN_STORIES = False
 # Enable comments on picture gallery pages?
 COMMENTS_IN_GALLERIES = False
 
