@@ -797,14 +797,14 @@ INDEX_DISPLAY_POST_COUNT = 100
 SEARCH_FORM = """
 <!-- Custom search -->
 <form method="get" id="search" action="//duckduckgo.com/"
- class="navbar-form pull-left">
+ class="navbar-form pull-right">
 <input type="hidden" name="sites" value="%s"/>
 <input type="hidden" name="k8" value="#444444"/>
 <input type="hidden" name="k9" value="#D51920"/>
 <input type="hidden" name="kt" value="h"/>
 <input type="text" name="q" maxlength="255"
  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;"/>
-<input type="submit" value="DuckDuckGo Search" style="visibility: hidden;" />
+ <input type="submit" value="DuckDuckGo Search" style="visibility: hidden; width:3em;" value="Go" />
 </form>
 <!-- End of custom search -->
 """ % SITE_URL
