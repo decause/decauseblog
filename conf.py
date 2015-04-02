@@ -804,7 +804,7 @@ SEARCH_FORM = """
 <input type="hidden" name="kt" value="h"/>
 <input type="text" name="q" maxlength="255"
  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;"/>
- <input type="submit" value="DuckDuckGo Search" style="visibility: hidden; width:3em;" value="Go" />
+ <input type="submit" style="visibility: hidden; width:3em;" value="Go" />
 </form>
 <!-- End of custom search -->
 """ % SITE_URL
