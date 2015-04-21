@@ -131,7 +131,7 @@ Under the covers:
 Fedora spins are alternative versions of Fedora, tailored for various
 types of users via hand-picked application sets or customizations. You
 can browse all of the available spins via
-http://spins.fedoraproject.org. Some of the popular ones include:
+[http://spins.fedoraproject.org](http://spins.fedoraproject.org). Some of the popular ones include:
 
 #### Fedora 22 KDE Plasma spin
 
@@ -195,7 +195,7 @@ Release Schedule
 The full release schedule is available on the Fedora wiki. The current
 schedule calls for a final release in the end of May.
 
-[https://fedoraproject.org/wiki/Releases/22/Schedule] (https://fedoraproject.org/wiki/Releases/22/Schedule)
+[https://fedoraproject.org/wiki/Releases/22/Schedule](https://fedoraproject.org/wiki/Releases/22/Schedule)
 
 These dates are subject to change, pending any major bugs or issues
 found during the testing process.
