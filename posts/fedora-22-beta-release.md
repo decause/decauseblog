@@ -16,14 +16,10 @@ Fedora 22 Beta Release Announcement
 The Fedora 22 Beta release has arrived, with a preview of the latest
 free and open source technology under development. Take a peek inside!
 
--   [Get Fedora 22 Beta
-    Workstation](https://getfedora.org/en/workstation/prerelease/)
--   [Get Fedora 22 Beta
-    Server](https://getfedora.org/en/server/prerelease/)
--   [Get Fedora 22 Beta
-    Cloud](https://getfedora.org/en/cloud/prerelease/)
--   [Get Fedora 22 Beta
-    Spins](https://spins.fedoraproject.org/prerelease)
+-   [Get Fedora 22 Beta Workstation](https://getfedora.org/en/workstation/prerelease/)
+-   [Get Fedora 22 Beta Server](https://getfedora.org/en/server/prerelease/)
+-   [Get Fedora 22 Beta Cloud](https://getfedora.org/en/cloud/prerelease/)
+-   [Get Fedora 22 Beta Spins](https://spins.fedoraproject.org/prerelease)
 
 What is the Beta release?
 -------------------------
@@ -164,7 +160,7 @@ freenode.
 As testing progresses, common issues are tracked on the Common F22
 Bugs page:
 
-https://fedoraproject.org/wiki/Common_F22_bugs
+[https://fedoraproject.org/wiki/Common_F22_bugs](https://fedoraproject.org/wiki/Common_F22_bugs)
 
 Roadmap
 -------
@@ -191,7 +187,7 @@ your early testing and feedback.
 For tips on reporting a bug effectively, read "how to file a bug
 report":
 
-https://fedoraproject.org/wiki/How_to_file_a_bug_report
+[https://fedoraproject.org/wiki/How_to_file_a_bug_report](https://fedoraproject.org/wiki/How_to_file_a_bug_report)
 
 Release Schedule
 ----------------
@@ -199,7 +195,7 @@ Release Schedule
 The full release schedule is available on the Fedora wiki. The current
 schedule calls for a final release in the end of May.
 
-https://fedoraproject.org/wiki/Releases/22/Schedule
+[https://fedoraproject.org/wiki/Releases/22/Schedule] (https://fedoraproject.org/wiki/Releases/22/Schedule)
 
 These dates are subject to change, pending any major bugs or issues
 found during the testing process.
